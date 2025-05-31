@@ -1,0 +1,126 @@
+body {
+  background: black;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  margin: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav-item a {
+  color: cyan;
+  text-decoration: none;
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+.heart {
+  width: 12px;
+  height: 12px;
+  clip-path: polygon(50% 0%, 61% 9%, 68% 18%, 75% 30%, 81% 45%, 85% 60%, 88% 75%, 88% 90%, 50% 100%, 12% 90%, 12% 75%, 15% 60%, 19% 45%, 25% 30%, 32% 18%, 39% 9%);
+  background: red;
+}
+
+.heart.cyan { background: cyan; }
+.heart.blue { background: #3b82f6; }
+.heart.pink { background: #ec4899; }
+.heart.orange { background: #fb923c; }
+.heart.yellow { background: #facc15; }
+.heart.green { background: #22c55e; }
+
+.tooltip {
+  position: absolute;
+  top: 35px;
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: none;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.nav-item:hover .tooltip {
+  display: block;
+}
+
+.spacer {
+  height: 250px;
+}
+.spacer.large {
+  height: 800px;
+}
+
+main .title {
+  font-size: 3rem;
+  color: red;
+  margin-top: 1rem;
+}
+
+.heart-container {
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+
+.big-heart {
+  width: 50px;
+  height: 50px;
+  fill: red;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.button {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#game-section {
+  margin: auto;
+  border: 2px solid white;
+  padding: 20px;
+  width: fit-content;
+  background: #111;
+}
+
+canvas {
+  background: black;
+  border: 2px solid white;
+}
+
+#fightBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
